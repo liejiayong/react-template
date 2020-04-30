@@ -1,8 +1,6 @@
-/*
- * Description: 
- * version: 
- * Author: liejiayong(809206619@qq.com)
- * Date: 2020-04-29 21:42:50
- * LastEditors: liejiayong(809206619@qq.com)
- * LastEditTime: 2020-04-29 21:42:51
- */
+import Store from '@/utils/store-mobx'
+import counter from './modules/counter'
+import post from './modules/post'
+import input from './modules/input'
+
+export default new Store({ counter, post, input })

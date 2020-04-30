@@ -1,8 +1,17 @@
-/*
- * Description: 
- * version: 
- * Author: liejiayong(809206619@qq.com)
- * Date: 2020-04-29 21:42:43
- * LastEditors: liejiayong(809206619@qq.com)
- * LastEditTime: 2020-04-29 21:42:44
+/**
+ * @name isDev
+ * @desc 判断是否为开发模式
  */
+export const isDev = process.env.NODE_ENV === "development"
+
+/**
+ * 
+ * @param {*} ms 
+ */
+export function delay(ms = 1000) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve()
+    }, ms)
+  })
+}
