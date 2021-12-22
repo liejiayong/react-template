@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "paths": { "*": [ "src/*" ] },
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "allowJs": true,   /* 允许引入js文件 */
+    "noImplicitAny": true,  /* 自动推论成any类型 */
+    "module": "commonjs",
+//    "moduleResolution": "ES6",
+//    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "target": "es3",
+    "jsx": "react",
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "types": ["node"],
+    "lib": [ "es2015", "dom" ]
+  }
+}
