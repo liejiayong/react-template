@@ -23,6 +23,7 @@ class Routes extends Component {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/test' component={Test} />
+            <Route exact path='/fast-table' component={lazyLoad('FastTable')}></Route>
 
             <Route render={() => <h1>404</h1>} />
           </Switch>

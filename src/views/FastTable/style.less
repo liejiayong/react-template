@@ -1,0 +1,18 @@
+.table-container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  .vt-auto-size {
+    height: auto !important;
+    .tr {
+      .th {
+        &:nth-of-type(2) {
+          border-left: 1px solid #fff;
+        }
+      }
+    }
+  }
+  .vt-fixed-header {
+    height: auto !important;
+  }
+}
