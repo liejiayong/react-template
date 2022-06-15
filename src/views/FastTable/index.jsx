@@ -40,6 +40,8 @@ class Home extends Component {
         title: '第五列',
         align: 'left',
         dataIndex: 'key3',
+        onHeaderCell: () => ({ 'border-left': '1px solid #ff0000' }),
+        onCell: () => ({ 'border-left': '1px solid #ff0000' }),
         width: 120,
       },
       {
@@ -59,7 +61,7 @@ class Home extends Component {
       { key: 1, key0: 'a', key1: 'b', key2: 'c', key3: 'd', key4: 'e' },
     ],
     otherProps: {
-      bodyMaxHeight: '200px',
+      // bodyMaxHeight: '200px',
       bordered: true,
       colMinWidth: '80px',
       onHeaderRow: (...a) => {
@@ -73,20 +75,21 @@ class Home extends Component {
   render() {
     const { columns, dataSource, otherProps } = this.state;
 
-    const dataSourceBid = dataSource
-      .concat(dataSource)
-      .map((val, key) => ({ ...val, key }))
-      .concat(
-        Array(5)
-          .fill({ key: 1 })
-          .map((val, key) => ({ ...val, key }))
-      );
+    const dataSourceBid = dataSource.concat(
+      Array(5)
+        .fill({ key: 1 })
+        .map((val, key) => ({ ...val, key }))
+    );
+
+    const style = { 'border-top': '1px solid #ff0000' };
     return (
       <Fragment>
         <div className='container'>fast-table</div>
         <div className='table-container'>
           <Table defaultShowCount={10} columns={columns} dataSource={dataSourceBid} {...otherProps} />
-          <Table defaultShowCount={10} columns={columns} dataSource={dataSource} {...otherProps} showHeader={false} />
+          <div style={style}>
+            <Table defaultShowCount={10} columns={columns} dataSource={dataSource} {...otherProps} showHeader={false} />
+          </div>
         </div>
       </Fragment>
     );
